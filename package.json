@@ -1,0 +1,28 @@
+{
+  "name": "taskbreakdown",
+  "version": "0.0.1",
+  "description": "This is a web application that is based around the idea of breaking down tasks into a series of smaller more digestable pieces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerErdman/TaskBreakdown.git"
+  },
+  "keywords": [
+    "\"To",
+    "do",
+    "list\"",
+    "\"Web",
+    "App\"",
+    "\"Full",
+    "Stack\""
+  ],
+  "author": "Tyler Erdman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerErdman/TaskBreakdown/issues"
+  },
+  "homepage": "https://github.com/TylerErdman/TaskBreakdown#readme"
+}
