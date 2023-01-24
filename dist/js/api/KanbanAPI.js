@@ -1,5 +1,5 @@
 // Contains all the code for local storage components
-"use strict";
+
 
 export default class KanbanAPI {
     static getItem(columnID) {
@@ -16,7 +16,7 @@ export default class KanbanAPI {
         const data = read();
         const column = data.find(column => column.id == columnID);
         const item = {
-            id: Math.floor(Math.random() * 100000),
+            id: 12 /* Math.floor(Math.random() * 100000) */,
             content
         }
 
@@ -69,5 +69,5 @@ function read() {
 }
 
 function save(data) {
-    localStorage.setItem("kanbam-data", JSON.stringify(data));
+    localStorage.setItem("kanban-data", JSON.stringify(data));
 }
