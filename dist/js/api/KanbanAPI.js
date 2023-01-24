@@ -1,5 +1,5 @@
 // Contains all the code for local storage components
-
+"use strict";
 
 export default class KanbanAPI {
     static getItem(columnID) {
@@ -41,7 +41,7 @@ export default class KanbanAPI {
             
         })();
 
-        console.log(item, currentColumn)
+        
     }
 }
 
