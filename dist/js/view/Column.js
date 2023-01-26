@@ -5,6 +5,7 @@ import Item from "./Item.js";
 
 export default class Column {
     constructor(id, title) {
+        'use strict';
         this.elements = {};
         this.elements.root = Column.createRoot();
         this.elements.title = this.elements.root.querySelector(".kanban_column-title");
@@ -28,6 +29,7 @@ export default class Column {
 
 
     static createRoot() {
+        'use strict';
         const range = document.createRange();
 
         range.selectNode(document.body);
@@ -42,6 +44,7 @@ export default class Column {
     }
 
     renderItem(data) {
+        'use strict';
         const item = new Item(data.id, data.content);
 
         this.elements.items.appendChild(item.elements.root);

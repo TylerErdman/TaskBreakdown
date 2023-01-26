@@ -2,6 +2,7 @@ import Column from "./Column.js";
 
 export default class Kanban {
     constructor(root) {
+        'use strict';
         this.root = root;
 
         Kanban.columns().forEach(column => {
@@ -12,6 +13,7 @@ export default class Kanban {
     }
 
     static columns() {
+        'use strict';
         return [
             {
                 id: 1,

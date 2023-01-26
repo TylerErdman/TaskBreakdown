@@ -1,8 +1,10 @@
 export default class Item{
+
     constructor(id, content) {
+        'use strict';
         this.elements = {};
         this.elements.root = Item.createRoot();
-        this.elements.input = this.elements.root.querySelector("kanban_item-input")
+        this.elements.input = this.elements.root.querySelector("kanban_item-input");
 
         this.elements.root.dataset.id = id;
         this.elements.input.textContent = content;
@@ -10,6 +12,7 @@ export default class Item{
     }
 
     static createRoot() {
+        "use strict";
         const range = document.createRange();
 
         range.selectNode(document.body);

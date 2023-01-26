@@ -1,8 +1,8 @@
 // Contains all the code for local storage components
-"use strict";
 
 export default class KanbanAPI {
     static getItems(columnID) {
+        'use strict';
         const column = read().find(column => column.id == columnID);
 
         if (!column) {
@@ -13,6 +13,7 @@ export default class KanbanAPI {
     }
 
     static insertItem(columnID, content) {
+        'use strict';
         const data = read();
         const column = data.find(column => column.id == columnID);
         const item = {
@@ -29,6 +30,7 @@ export default class KanbanAPI {
     }
 
     static updateItem(itemID, newProps) {
+        'use strict';
         const data = read();
         const [item, currentColumn] = (() => {
             for (const column of data) {
@@ -72,6 +74,7 @@ export default class KanbanAPI {
     }
 
     static deleteItem(itemID) {
+        'use strict';
         const data = read();
 
         for (const column of data) {
@@ -88,6 +91,7 @@ export default class KanbanAPI {
 }
 
 function read() {
+    'use strict';
     const json = localStorage.getItem("kanban-data");
 
     if (!json) {
@@ -111,5 +115,6 @@ function read() {
 }
 
 function save(data) {
+    'use strict';
     localStorage.setItem("kanban-data", JSON.stringify(data));
 }
